@@ -5,7 +5,7 @@ import math
 
 
 num_of_points =100
-num_of_agents = 30
+num_of_agents = 10
 radiusO = 60
 radiusA = 15
  
@@ -46,8 +46,7 @@ def Cspace():
 def disCspace():
     for i in range(len(listObstacles)):
                 pushMatrix()
-                strokeWeight(5)
-                stroke(0,123,250)
+                strokeWeight(1)
                 noFill()
                 ellipse(listObstacles[i][0],listObstacles[i][1], radiusA+radiusO,radiusA+radiusO)
                 popMatrix()
@@ -136,9 +135,8 @@ def disAgents ():
         
         if i.id == 5:
             pushMatrix()
-            noFill();
             noStroke();
-            stroke(200,0,200)
+            fill(200,0,200)
             ellipse(i.pos[0] ,i.pos[1] , radiusA,radiusA)
             popMatrix()
         else:
@@ -157,8 +155,7 @@ def disAgents ():
             popMatrix()
         
             pushMatrix()
-            noFill();
-            noStroke();
-            stroke(132,3,0)
+            noStroke()
+            fill(180,0,0)
             ellipse(i.pos[0] ,i.pos[1] , radiusA,radiusA)
             popMatrix()
